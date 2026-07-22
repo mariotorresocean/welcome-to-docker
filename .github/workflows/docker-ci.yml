@@ -1,0 +1,15 @@
+name: Docker Build CI
+# Quando vai ser acionado (gatilho)
+on:
+  push:
+    branches: ["main"]
+# O que isso vai rodar/suas tarefas
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o codigo
+        uses: actions/checkout@v4
+
+      - name: Construir com docker compose
+        run: docker compose build
