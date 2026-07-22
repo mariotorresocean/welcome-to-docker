@@ -13,3 +13,6 @@ jobs:
 
       - name: Construir com docker compose
         run: docker compose build
+
+      - name: Status final
+        run: echo "A imagem do docker foi criada com sucesso nos servidores do github"
